@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — DigiWork</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+</head>
+<body>
+<nav class="nav">
+  <div class="container"><div class="nav-inner">
+    <a href="index.html" class="nav-logo">Digi<span class="nav-logo-dot">Work</span><span class="nav-badge">Free</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a><a href="workshops.html">Workshops</a>
+      <a href="resources.html">Resources</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+    </div>
+    <a href="workshops.html" class="nav-cta">Register Free →</a>
+    <button class="hamburger"><span></span><span></span><span></span></button>
+  </div></div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a><a href="workshops.html">Workshops</a>
+  <a href="resources.html">Resources</a><a href="about.html">About</a><a href="contact.html">Contact</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">We'd Love to Hear From You</div>
+    <h1>Get in Touch</h1>
+    <p>Whether you want to volunteer, partner with us, or just ask a question — reach out anytime.</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <div class="section-label">Contact Info</div>
+        <h2 style="font-size:32px; margin-bottom:8px;">Let's Talk</h2>
+        <p style="color:var(--text-muted); margin-bottom:40px; line-height:1.7;">We're a small team based in Jessore. We read every message and aim to reply within 24 hours.</p>
+
+        <div class="contact-item">
+          <div class="contact-item-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Location</div>
+            <div class="contact-item-value">BRAC University Campus<br>Badda, Dhaka, Bangladesh</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value">abir.ahmed5@g.bracu.ac.bd</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">📱</div>
+          <div>
+            <div class="contact-item-label">WhatsApp</div>
+            <div class="contact-item-value">+880 1724023713</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item-icon">🏛️</div>
+          <div>
+            <div class="contact-item-label">Office</div>
+            <div class="contact-item-value">Currently Not Available<br>Expected in future</div>
+          </div>
+        </div>
+
+        <div style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:24px; margin-top:16px;">
+          <h4 style="margin-bottom:8px;">Want to Volunteer?</h4>
+          <p style="font-size:14px; color:var(--text-muted); line-height:1.6;">We're looking for university students who want to assist with workshops. No prior teaching experience required — just enthusiasm!</p>
+          <a href="#" onclick="document.getElementById('contactSubject').value='Volunteer Application'; document.getElementById('contactName').focus(); return false;" style="display:inline-block; margin-top:12px; font-size:13px; color:var(--accent); font-weight:600;">Apply to Volunteer →</a>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="section-label">Send a Message</div>
+        <h2 style="font-size:28px; margin-bottom:24px;">Write to Us</h2>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name *</label>
+              <input type="text" class="form-input" id="contactName" placeholder="Full name" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address *</label>
+              <input type="email" class="form-input" id="contactEmail" placeholder="you@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject</label>
+            <select class="form-input" id="contactSubject">
+              <option value="">Choose a subject...</option>
+              <option value="General Inquiry">General Inquiry</option>
+              <option value="Volunteer Application">I want to volunteer</option>
+              <option value="NGO Partnership">NGO / Organization Partnership</option>
+              <option value="Media / Press">Media / Press</option>
+              <option value="Workshop Question">Question about a workshop</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Message *</label>
+            <textarea class="form-input" id="contactMessage" placeholder="Tell us what's on your mind..." required style="min-height:150px;"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message →</button>
+          <p style="font-size:12px; color:var(--text-dim); margin-top:12px; text-align:center;">We aim to reply within 24 hours.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section" style="background:var(--bg2); border-top:1px solid var(--card-border);">
+  <div class="container">
+    <div style="text-align:center; margin-bottom:48px;" class="reveal">
+      <div class="section-label" style="justify-content:center;">FAQ</div>
+      <h2 class="section-title">Common Questions</h2>
+    </div>
+    <div style="max-width:700px; margin:0 auto; display:flex; flex-direction:column; gap:16px;" class="reveal">
+      <details style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:20px 24px;">
+        <summary style="cursor:pointer; font-weight:600; font-size:16px; list-style:none;">Are the workshops really free?</summary>
+        <p style="margin-top:12px; color:var(--text-muted); font-size:15px;">Yes, 100% free. No registration fee, no materials fee. DigiWork is a community initiative funded through the Millennium Fellowship program.</p>
+      </details>
+      <details style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:20px 24px;">
+        <summary style="cursor:pointer; font-weight:600; font-size:16px; list-style:none;">Do I need a laptop or computer?</summary>
+        <p style="margin-top:12px; color:var(--text-muted); font-size:15px;">No! All workshops are designed to work on smartphones. If you have an Android phone, you have everything you need.</p>
+      </details>
+      <details style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:20px 24px;">
+        <summary style="cursor:pointer; font-weight:600; font-size:16px; list-style:none;">Are the workshops in Bangla?</summary>
+        <p style="margin-top:12px; color:var(--text-muted); font-size:15px;">Yes. All sessions are conducted in Bangla so that language is never a barrier to learning.</p>
+      </details>
+      <details style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:20px 24px;">
+        <summary style="cursor:pointer; font-weight:600; font-size:16px; list-style:none;">Who can attend?</summary>
+        <p style="margin-top:12px; color:var(--text-muted); font-size:15px;">Any young adult aged 18–35 from Jessore or surrounding areas who is looking to improve their digital skills for employment.</p>
+      </details>
+      <details style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius-sm); padding:20px 24px;">
+        <summary style="cursor:pointer; font-weight:600; font-size:16px; list-style:none;">Can I attend all 8 workshops?</summary>
+        <p style="margin-top:12px; color:var(--text-muted); font-size:15px;">Absolutely! We encourage you to register for all workshops. Each one builds on the previous, but they also work as standalone sessions.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:0">
+      <p>© 2026 DigiWork — Jessore, Bangladesh. Millennium Fellowship 2026.</p>
+      <div class="footer-un"><div class="footer-un-dot"></div>UN SDG 8 · Decent Work</div>
+    </div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+</body>
+</html>
