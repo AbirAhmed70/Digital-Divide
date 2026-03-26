@@ -1,5 +1,5 @@
 // ─── Configuration ───────────────────────────────────────────────────────────
-const API_BASE = 'http://localhost:8000/api';
+const API_BASE = 'https://digital-divide.onrender.com/api';
 
 // ─── Utility Functions ────────────────────────────────────────────────────────
 function showToast(message, type = 'success') {
