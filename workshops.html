@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshops — DigiWork</title>
+  <meta name="description" content="Browse and register for all 8 free digital skills workshops. Practical, Bangla-taught, held in Jessore, Bangladesh.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Digi<span class="nav-logo-dot">Work</span><span class="nav-badge">Free</span></a>
+      <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="workshops.html">Workshops</a>
+        <a href="resources.html">Resources</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <a href="workshops.html" class="nav-cta">Register Free →</a>
+      <button class="hamburger"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="workshops.html">Workshops</a>
+  <a href="resources.html">Resources</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<div class="page-header">
+  <div class="page-header-bg"></div>
+  <div class="container">
+    <div class="section-label" style="justify-content:center;">Aug – Nov 2026</div>
+    <h1>Free Workshops</h1>
+    <p>8 hands-on sessions, each 2 hours long, all taught in Bangla. Register your spot now — seats are limited to 30 per session.</p>
+    <div style="height:24px"></div>
+    <div style="display:flex; justify-content:center; gap:24px; flex-wrap:wrap; font-size:14px; color:var(--text-muted);">
+      <span>📍 Current providing our support in Jessore</span>
+      <span>🕙 10:00 AM – 12:00 PM</span>
+      <span>🆓 Completely Free</span>
+      <span>📱 Smartphone Friendly</span>
+    </div>
+  </div>
+</div>
+
+<!-- Filter bar -->
+<section class="section-sm">
+  <div class="container">
+    <div style="display:flex; gap:12px; margin-bottom:40px; flex-wrap:wrap;" id="filterBar">
+      <button class="filter-btn active" data-filter="all" onclick="filterWorkshops('all')">All Workshops</button>
+      <button class="filter-btn" data-filter="Beginner" onclick="filterWorkshops('Beginner')">Beginner</button>
+      <button class="filter-btn" data-filter="Intermediate" onclick="filterWorkshops('Intermediate')">Intermediate</button>
+    </div>
+    <style>
+      .filter-btn {
+        background: var(--card); border: 1px solid var(--card-border); color: var(--text-muted);
+        padding: 10px 20px; border-radius: 99px; font-size: 14px; font-weight: 500;
+        cursor: pointer; transition: all 0.2s;
+      }
+      .filter-btn:hover, .filter-btn.active {
+        background: var(--accent); color: var(--bg); border-color: var(--accent);
+      }
+    </style>
+
+    <div class="workshops-grid" id="workshopsContainer">
+      <div class="loading-workshops" style="grid-column:1/-1">
+        <div class="spinner"></div>
+        <p>Loading workshops...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Info Banner -->
+<section class="section-sm">
+  <div class="container">
+    <div style="background:var(--card); border:1px solid var(--card-border); border-radius:var(--radius); padding:40px; display:grid; grid-template-columns:repeat(3,1fr); gap:32px; text-align:center;" class="reveal">
+      <div>
+        <div style="font-size:32px; margin-bottom:8px;">🕙</div>
+        <h4 style="margin-bottom:6px;">2 Hours Each</h4>
+        <p style="font-size:14px; color:var(--text-muted);">Every session runs 10:00 AM – 12:00 PM, every second Sunday starting August 10.</p>
+      </div>
+      <div>
+        <div style="font-size:32px; margin-bottom:8px;">📍</div>
+        <h4 style="margin-bottom:6px;">Jessore University</h4>
+        <p style="font-size:14px; color:var(--text-muted);">Sessions held in Room 204. Directions sent on registration confirmation.</p>
+      </div>
+      <div>
+        <div style="font-size:32px; margin-bottom:8px;">📱</div>
+        <h4 style="margin-bottom:6px;">Bring Your Phone</h4>
+        <p style="font-size:14px; color:var(--text-muted);">No laptop required. All exercises designed to work on Android smartphones.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-bottom" style="border-top:0; padding-top:0;">
+      <p>© 2026 DigiWork — Jessore, Bangladesh. A Millennium Fellowship 2026 Project.</p>
+      <div class="footer-un"><div class="footer-un-dot"></div>UN SDG 8 · Decent Work</div>
+    </div>
+  </div>
+</footer>
+
+<!-- Register Modal -->
+<div class="modal-overlay" id="registerModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeRegisterModal()">✕</button>
+    <div id="registerForm">
+      <h2>Register for Workshop</h2>
+      <p style="color:var(--text-muted); font-size:14px; margin-bottom:20px;">100% free. No fees, ever.</p>
+      <div class="modal-workshop-info"><span>📅</span><span id="modalWorkshopTitle">Workshop</span></div>
+      <div class="alert alert-error" id="registerAlert"></div>
+      <form id="regForm">
+        <div class="form-group">
+          <label class="form-label">Full Name *</label>
+          <input type="text" class="form-input" id="regName" placeholder="Your full name" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Email *</label>
+            <input type="email" class="form-input" id="regEmail" placeholder="you@email.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Phone</label>
+            <input type="tel" class="form-input" id="regPhone" placeholder="01XXXXXXXXX">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Age</label>
+            <input type="number" class="form-input" id="regAge" placeholder="22" min="16" max="60">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Current Situation</label>
+            <select class="form-input" id="regSituation">
+              <option value="">Select...</option>
+              <option value="unemployed">Looking for a job</option>
+              <option value="student">Still studying</option>
+              <option value="employed">Want to upskill</option>
+              <option value="freelancer">Want to freelance</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="form-submit" id="regSubmitBtn">Confirm Registration →</button>
+        <p style="font-size:12px; color:var(--text-dim); margin-top:12px; text-align:center;">We'll email your confirmation. No spam.</p>
+      </form>
+    </div>
+    <div class="form-success" id="registerSuccess">
+      <div class="form-success-icon">🎉</div>
+      <h3>You're Registered!</h3>
+      <p style="color:var(--text-muted);">Check your email for confirmation. See you at the workshop!</p>
+      <button class="btn-primary" style="margin-top:24px;" onclick="closeRegisterModal()">Done →</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  let allWorkshopsData = [];
+
+  async function loadWorkshops() {
+    const container = document.getElementById('workshopsContainer');
+    if (!container) return;
+    try {
+      const res = await fetch(`${API_BASE}/workshops`);
+      allWorkshopsData = await res.json();
+      renderWorkshops(container, allWorkshopsData);
+    } catch {
+      container.innerHTML = `<div style="grid-column:1/-1; text-align:center; padding:60px; color:var(--text-muted);">
+        <div style="font-size:40px; margin-bottom:16px;">⚙️</div>
+        <p>Start the FastAPI backend to see live workshops.</p><br>
+        <code style="font-size:12px; background:var(--card); padding:8px 16px; border-radius:8px;">cd backend && uvicorn main:app --reload</code>
+      </div>`;
+    }
+  }
+
+  function filterWorkshops(level) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`[data-filter="${level}"]`).classList.add('active');
+    const filtered = level === 'all' ? allWorkshopsData : allWorkshopsData.filter(w => w.skill_level === level);
+    renderWorkshops(document.getElementById('workshopsContainer'), filtered);
+  }
+</script>
+</body>
+</html>
